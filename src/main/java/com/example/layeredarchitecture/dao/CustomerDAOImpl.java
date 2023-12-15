@@ -51,4 +51,11 @@ public class CustomerDAOImpl {
         return pstm.executeQuery().next();
     }
 
+    public void deleteCustomer(CustomerDTO dto) throws SQLException, ClassNotFoundException {
+        Connection connection = DBConnection.getDbConnection().getConnection();
+        PreparedStatement pstm = connection.prepareStatement("DELETE FROM Customer WHERE id=?");
+        pstm.setString(1, dto.getId());
+        pstm.executeUpdate();
+    }
+
 }
