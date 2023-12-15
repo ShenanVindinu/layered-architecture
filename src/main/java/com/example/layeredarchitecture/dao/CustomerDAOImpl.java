@@ -44,4 +44,11 @@ public class CustomerDAOImpl {
 
     }
 
+    public boolean existCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
+        Connection connection = DBConnection.getDbConnection().getConnection();
+        PreparedStatement pstm = connection.prepareStatement("SELECT id FROM Customer WHERE id=?");
+        pstm.setString(1, customerDTO.getId());
+        return pstm.executeQuery().next();
+    }
+
 }
