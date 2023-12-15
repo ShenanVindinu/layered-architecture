@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Exist Customer Refactored">
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Delete Customer Refactored">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAOImpl.java" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
       <workItem from="1702616486444" duration="744000" />
       <workItem from="1702617237880" duration="21000" />
       <workItem from="1702617290290" duration="896000" />
-      <workItem from="1702619106446" duration="3423000" />
+      <workItem from="1702619106446" duration="3795000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -114,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702621876603</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Delete Customer Refactored">
+      <option name="closed" value="true" />
+      <created>1702622574951</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702622574951</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +133,7 @@
     <MESSAGE value="Db Connection Password Changed" />
     <MESSAGE value="Save Customer and Update Customer Refactored" />
     <MESSAGE value="Exist Customer Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exist Customer Refactored" />
+    <MESSAGE value="Delete Customer Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Customer Refactored" />
   </component>
 </project>
