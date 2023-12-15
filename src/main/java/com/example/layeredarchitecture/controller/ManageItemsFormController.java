@@ -1,5 +1,7 @@
 package com.example.layeredarchitecture.controller;
 
+import com.example.layeredarchitecture.dao.CustomerDAO;
+import com.example.layeredarchitecture.dao.ItemDAO;
 import com.example.layeredarchitecture.dao.ItemDAOImpl;
 import com.example.layeredarchitecture.model.ItemDTO;
 import com.example.layeredarchitecture.view.tdm.ItemTM;
@@ -35,6 +37,7 @@ public class ManageItemsFormController {
     public TableView<ItemTM> tblItems;
     public TextField txtUnitPrice;
     public JFXButton btnAddNewItem;
+    ItemDAO itemDAO = new ItemDAOImpl();
 
     public void initialize() {
         tblItems.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("code"));
@@ -70,7 +73,7 @@ public class ManageItemsFormController {
         tblItems.getItems().clear();
         try {
             /*Get all items*/
-            ArrayList<ItemTM> list = new ItemDAOImpl().getAllItems();
+            ArrayList<ItemTM> list = itemDAO.getAllItems();
             for (ItemTM tm : list) {
                 tblItems.getItems().add(tm);
             }
@@ -131,7 +134,7 @@ public class ManageItemsFormController {
             }
 
             ItemDTO itemDTO = new ItemDTO(code);
-            new ItemDAOImpl().deleteItem(itemDTO);
+            itemDAO.deleteItem(itemDTO);
 
             tblItems.getItems().remove(tblItems.getSelectionModel().getSelectedItem());
             tblItems.getSelectionModel().clearSelection();
@@ -172,7 +175,7 @@ public class ManageItemsFormController {
                 }
                 //Save Item
                 ItemDTO itemDTO = new ItemDTO(code, description, unitPrice, qtyOnHand);
-                new ItemDAOImpl().saveItem(itemDTO);
+                itemDAO.saveItem(itemDTO);
                 tblItems.getItems().add(new ItemTM(code, description, unitPrice, qtyOnHand));
 
             } catch (SQLException e) {
@@ -208,14 +211,12 @@ public class ManageItemsFormController {
 
     private boolean existItem(String code) throws SQLException, ClassNotFoundException {
         ItemDTO itemDTO = new ItemDTO(code);
-        ItemDAOImpl itemDAO = new ItemDAOImpl();
         return itemDAO.existItems(itemDTO);
     }
 
 
     private String generateNewId() {
         try {
-            ItemDAOImpl itemDAO = new ItemDAOImpl();
             return itemDAO.generateNewId();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();

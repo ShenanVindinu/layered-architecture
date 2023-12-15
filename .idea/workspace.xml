@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Refactored Load all Items Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" afterDir="false" />
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Removed Unused Imports">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +79,7 @@
       <workItem from="1702617237880" duration="21000" />
       <workItem from="1702617290290" duration="896000" />
       <workItem from="1702619106446" duration="4717000" />
-      <workItem from="1702628004803" duration="4836000" />
+      <workItem from="1702628004803" duration="5719000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -178,7 +177,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702631693467</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="PlaceOrder Search Customer Refactored">
+      <option name="closed" value="true" />
+      <created>1702632984835</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702632984835</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Removed Unused Imports">
+      <option name="closed" value="true" />
+      <created>1702633212590</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702633212590</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +211,8 @@
     <MESSAGE value="Exist Items Refactored" />
     <MESSAGE value="Generate new Item ID Refactored" />
     <MESSAGE value="Refactored Load all Items Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored Load all Items Updated" />
+    <MESSAGE value="PlaceOrder Search Customer Refactored" />
+    <MESSAGE value="Removed Unused Imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Unused Imports" />
   </component>
 </project>

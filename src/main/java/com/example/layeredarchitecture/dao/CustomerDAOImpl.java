@@ -6,8 +6,9 @@ import com.example.layeredarchitecture.model.CustomerDTO;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class CustomerDAOImpl {
+public class CustomerDAOImpl implements CustomerDAO{
 
+    @Override
     public ArrayList<CustomerDTO> getAllCustomer() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         Statement stm = connection.createStatement();
@@ -22,7 +23,7 @@ public class CustomerDAOImpl {
 
 
     }
-
+    @Override
     public boolean saveCustomer(CustomerDTO dto) throws SQLException, ClassNotFoundException {
 
         Connection connection = DBConnection.getDbConnection().getConnection();
@@ -32,7 +33,7 @@ public class CustomerDAOImpl {
         pstm.setString(3, dto.getAddress());
         return pstm.executeUpdate() > 0;
     }
-
+    @Override
     public void updateCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
 
         Connection connection = DBConnection.getDbConnection().getConnection();
@@ -43,21 +44,21 @@ public class CustomerDAOImpl {
         pstm.executeUpdate();
 
     }
-
+    @Override
     public boolean existCustomer(CustomerDTO customerDTO) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT id FROM Customer WHERE id=?");
         pstm.setString(1, customerDTO.getId());
         return pstm.executeQuery().next();
     }
-
+    @Override
     public void deleteCustomer(CustomerDTO dto) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("DELETE FROM Customer WHERE id=?");
         pstm.setString(1, dto.getId());
         pstm.executeUpdate();
     }
-
+    @Override
     public String generateNewId() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         ResultSet rst = connection.createStatement().executeQuery("SELECT id FROM Customer ORDER BY id DESC LIMIT 1;");
