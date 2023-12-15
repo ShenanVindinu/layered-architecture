@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URL;
 import java.sql.*;
-
+import java.util.ArrayList;
 
 
 public class ManageItemsFormController {
@@ -71,9 +71,9 @@ public class ManageItemsFormController {
         tblItems.getItems().clear();
         try {
             /*Get all items*/
-            ResultSet resultSet = new ItemDAOImpl().getAllItems();
-            while (resultSet.next()) {
-                tblItems.getItems().add(new ItemTM(resultSet.getString("code"), resultSet.getString("description"), resultSet.getBigDecimal("unitPrice"), resultSet.getInt("qtyOnHand")));
+            ArrayList<ItemTM> list = new ItemDAOImpl().getAllItems();
+            for (ItemTM tm : list) {
+                tblItems.getItems().add(tm);
             }
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, e.getMessage()).show();

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Exist Items Refactored">
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Generate new Item ID Refactored">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAOImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,7 @@
       <workItem from="1702617237880" duration="21000" />
       <workItem from="1702617290290" duration="896000" />
       <workItem from="1702619106446" duration="4717000" />
-      <workItem from="1702628004803" duration="2398000" />
+      <workItem from="1702628004803" duration="3649000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -164,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702630099555</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Generate new Item ID Refactored">
+      <option name="closed" value="true" />
+      <created>1702630447299</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702630447299</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +186,7 @@
     <MESSAGE value="Delete Item and Load all Item Refactored" />
     <MESSAGE value="Save Item and Update Item Refactored" />
     <MESSAGE value="Exist Items Refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exist Items Refactored" />
+    <MESSAGE value="Generate new Item ID Refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generate new Item ID Refactored" />
   </component>
 </project>

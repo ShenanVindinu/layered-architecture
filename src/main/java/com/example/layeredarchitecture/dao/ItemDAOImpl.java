@@ -2,17 +2,30 @@ package com.example.layeredarchitecture.dao;
 
 import com.example.layeredarchitecture.db.DBConnection;
 import com.example.layeredarchitecture.model.ItemDTO;
+import com.example.layeredarchitecture.view.tdm.ItemTM;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class ItemDAOImpl {
 
 
-    public ResultSet getAllItems() throws SQLException, ClassNotFoundException {
+    public ArrayList<ItemTM> getAllItems() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         Statement stm = connection.createStatement();
         ResultSet rst = stm.executeQuery("SELECT * FROM Item");
-        return rst;
+        ArrayList<ItemTM> list = new ArrayList<>();
+
+        while(rst.next()) {
+            list.add(new ItemTM(
+                    rst.getString(1),
+                    rst.getString(2),
+                    rst.getBigDecimal(3),
+                    rst.getInt(4)
+            ));
+        }
+
+        return list;
     }
 
     public void deleteItem(ItemDTO dto) throws SQLException, ClassNotFoundException {
