@@ -10,16 +10,19 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlaceOrderDAOImpl {
+public class PlaceOrderDAOImpl implements PlaceOrderDAO {
 
     private String newValue;
+
+
+
 
     public PlaceOrderDAOImpl(String newValue) {
         this.newValue = newValue;
     }
 
     public PlaceOrderDAOImpl(){}
-
+    @Override
     public CustomerDTO searchCustomer() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT * FROM Customer WHERE id=?");
@@ -29,7 +32,7 @@ public class PlaceOrderDAOImpl {
         CustomerDTO customerDTO = new CustomerDTO(newValue + "", rst.getString("name"), rst.getString("address"));
         return customerDTO;
     }
-
+    @Override
     public ItemDTO findItem(String newItemCode) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT * FROM Item WHERE code=?");
@@ -38,21 +41,21 @@ public class PlaceOrderDAOImpl {
         rst.next();
         return new ItemDTO(newItemCode + "", rst.getString("description"), rst.getBigDecimal("unitPrice"), rst.getInt("qtyOnHand"));
     }
-
+    @Override
     public boolean existItem(String code) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT code FROM Item WHERE code=?");
         pstm.setString(1, code);
         return pstm.executeQuery().next();
     }
-
+    @Override
     public boolean existCustomer(String id) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT id FROM Customer WHERE id=?");
         pstm.setString(1, id);
         return pstm.executeQuery().next();
     }
-
+    @Override
     public String generateNewOrderId() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         Statement stm = connection.createStatement();
@@ -60,7 +63,7 @@ public class PlaceOrderDAOImpl {
 
         return rst.next() ? String.format("OID-%03d", (Integer.parseInt(rst.getString("oid").replace("OID-", "")) + 1)) : "OID-001";
     }
-
+    @Override
     public ArrayList<CustomerDTO> loadAllCustomerIds() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         Statement stm = connection.createStatement();
@@ -73,7 +76,7 @@ public class PlaceOrderDAOImpl {
         }
         return dto;
     }
-
+    @Override
     public ArrayList<ItemDTO> loadAllItemCodes() throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         Statement stm = connection.createStatement();
@@ -86,7 +89,7 @@ public class PlaceOrderDAOImpl {
         }
         return dto;
     }
-
+    @Override
     public boolean saveOrder(String orderId, LocalDate orderDate, String customerId, List<OrderDetailDTO> orderDetails) throws SQLException, ClassNotFoundException {
 
         Connection connection;
@@ -147,7 +150,7 @@ public class PlaceOrderDAOImpl {
         return true;
 
     }
-
+    @Override
     public ItemDTO findItems(String code) throws SQLException, ClassNotFoundException {
         Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement pstm = connection.prepareStatement("SELECT * FROM Item WHERE code=?");
@@ -157,11 +160,11 @@ public class PlaceOrderDAOImpl {
         return new ItemDTO(code, rst.getString("description"), rst.getBigDecimal("unitPrice"), rst.getInt("qtyOnHand"));
     }
 
-
+    @Override
     public String getNewValue() {
         return newValue;
     }
-
+    @Override
     public void setNewValue(String newValue) {
         this.newValue = newValue;
     }

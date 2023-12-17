@@ -1,6 +1,7 @@
 package com.example.layeredarchitecture.controller;
 
 import com.example.layeredarchitecture.dao.ItemDAO;
+import com.example.layeredarchitecture.dao.PlaceOrderDAO;
 import com.example.layeredarchitecture.dao.PlaceOrderDAOImpl;
 import com.example.layeredarchitecture.db.DBConnection;
 import com.example.layeredarchitecture.model.CustomerDTO;
@@ -52,6 +53,7 @@ public class PlaceOrderFormController {
     public Label lblDate;
     public Label lblTotal;
     private String orderId;
+    PlaceOrderDAO placeOrderDAO = new PlaceOrderDAOImpl();
 
     public void initialize() throws SQLException, ClassNotFoundException {
 
@@ -177,18 +179,15 @@ public class PlaceOrderFormController {
     }
 
     private boolean existItem(String code) throws SQLException, ClassNotFoundException {
-        PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
         return placeOrderDAO.existItem(code);
     }
 
     boolean existCustomer(String id) throws SQLException, ClassNotFoundException {
-        PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
         return placeOrderDAO.existCustomer(id);
     }
 
     public String generateNewOrderId() {
         try {
-            PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
             return placeOrderDAO.generateNewOrderId();
         } catch (SQLException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to generate a new order id").show();
@@ -200,7 +199,6 @@ public class PlaceOrderFormController {
 
     private void loadAllCustomerIds() {
         try {
-            PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
             ArrayList<CustomerDTO> dto = placeOrderDAO.loadAllCustomerIds();
             for (CustomerDTO c : dto) {
             cmbCustomerId.getItems().add(c.getId());
@@ -215,7 +213,6 @@ public class PlaceOrderFormController {
     private void loadAllItemCodes() {
         try {
             /*Get all items*/
-            PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
             ArrayList<ItemDTO> dto = placeOrderDAO.loadAllItemCodes();
 
             for (ItemDTO c : dto) {
@@ -318,7 +315,6 @@ public class PlaceOrderFormController {
         /*Transaction*/
 
         try {
-            PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
             return placeOrderDAO.saveOrder(orderId, orderDate, customerId, orderDetails);
 
         } catch (SQLException throwables) {
@@ -332,7 +328,6 @@ public class PlaceOrderFormController {
 
     public ItemDTO findItem(String code) {
         try {
-            PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
             return placeOrderDAO.findItems(code);
         } catch (SQLException e) {
             throw new RuntimeException("Failed to find the Item " + code, e);
