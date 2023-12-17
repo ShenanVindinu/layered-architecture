@@ -1,13 +1,11 @@
 package com.example.layeredarchitecture.controller;
 
-import com.example.layeredarchitecture.dao.ItemDAO;
+
 import com.example.layeredarchitecture.dao.PlaceOrderDAO;
 import com.example.layeredarchitecture.dao.PlaceOrderDAOImpl;
-import com.example.layeredarchitecture.db.DBConnection;
 import com.example.layeredarchitecture.model.CustomerDTO;
 import com.example.layeredarchitecture.model.ItemDTO;
 import com.example.layeredarchitecture.model.OrderDetailDTO;
-import com.example.layeredarchitecture.view.tdm.CustomerTM;
 import com.example.layeredarchitecture.view.tdm.OrderDetailTM;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
@@ -133,7 +131,6 @@ public class PlaceOrderFormController {
 //                        throw new NotFoundException("There is no such item associated with the id " + code);
                     }
 
-                    PlaceOrderDAOImpl placeOrderDAO = new PlaceOrderDAOImpl();
                     ItemDTO item = placeOrderDAO.findItem(newItemCode);
 
                     txtDescription.setText(item.getDescription());
@@ -316,7 +313,6 @@ public class PlaceOrderFormController {
 
         try {
             return placeOrderDAO.saveOrder(orderId, orderDate, customerId, orderDetails);
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {

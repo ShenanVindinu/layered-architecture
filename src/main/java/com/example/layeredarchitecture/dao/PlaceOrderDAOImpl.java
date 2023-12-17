@@ -92,9 +92,7 @@ public class PlaceOrderDAOImpl implements PlaceOrderDAO {
     @Override
     public boolean saveOrder(String orderId, LocalDate orderDate, String customerId, List<OrderDetailDTO> orderDetails) throws SQLException, ClassNotFoundException {
 
-        Connection connection;
-
-        connection = DBConnection.getDbConnection().getConnection();
+        Connection connection = DBConnection.getDbConnection().getConnection();
         PreparedStatement stm = connection.prepareStatement("SELECT oid FROM `Orders` WHERE oid=?");
         stm.setString(1, orderId);
         /*if order id already exist*/

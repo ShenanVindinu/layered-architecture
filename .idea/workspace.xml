@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="PlaceOrderFormController Loose coupled and dependency injected now" />
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Checked and corrected some code to reduce boilerplate code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/PlaceOrderFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/PlaceOrderFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +88,10 @@
       <workItem from="1702619106446" duration="4717000" />
       <workItem from="1702628004803" duration="5719000" />
       <workItem from="1702635247077" duration="2554000" />
-      <workItem from="1702797440912" duration="8771000" />
+      <workItem from="1702797440912" duration="9989000" />
+      <workItem from="1702812991034" duration="4000" />
+      <workItem from="1702821032264" duration="3988000" />
+      <workItem from="1702830499378" duration="968000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -218,7 +229,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702811109285</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Checked and corrected some code to reduce boilerplate code">
+      <option name="closed" value="true" />
+      <created>1702812536187</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1702812536187</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +260,7 @@
     <MESSAGE value="Loose Coupled and Dependency injected" />
     <MESSAGE value="PlaceOrderFormController cohesion is high now" />
     <MESSAGE value="PlaceOrderFormController Loose coupled and dependency injected now" />
-    <option name="LAST_COMMIT_MESSAGE" value="PlaceOrderFormController Loose coupled and dependency injected now" />
+    <MESSAGE value="Checked and corrected some code to reduce boilerplate code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checked and corrected some code to reduce boilerplate code" />
   </component>
 </project>
