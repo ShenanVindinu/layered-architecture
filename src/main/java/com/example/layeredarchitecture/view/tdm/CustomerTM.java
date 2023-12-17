@@ -16,6 +16,10 @@ public class CustomerTM implements Comparable<CustomerTM> {
         this.address = address;
     }
 
+    public CustomerTM(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }

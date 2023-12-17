@@ -216,8 +216,6 @@ public class ManageCustomersFormController {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-
-
         if (tblCustomers.getItems().isEmpty()) {
             return "C00-001";
         } else {
