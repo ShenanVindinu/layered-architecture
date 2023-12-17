@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="Loose Coupled and Dependency injected">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/view/tdm/CustomerTM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/view/tdm/CustomerTM.java" afterDir="false" />
-    </list>
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="PlaceOrderFormController Loose coupled and dependency injected now" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +80,7 @@
       <workItem from="1702619106446" duration="4717000" />
       <workItem from="1702628004803" duration="5719000" />
       <workItem from="1702635247077" duration="2554000" />
-      <workItem from="1702797440912" duration="7694000" />
+      <workItem from="1702797440912" duration="8771000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -209,7 +202,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702637124683</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="PlaceOrderFormController cohesion is high now">
+      <option name="closed" value="true" />
+      <created>1702810380385</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1702810380385</updated>
+    </task>
+    <task id="LOCAL-00017" summary="PlaceOrderFormController Loose coupled and dependency injected now">
+      <option name="closed" value="true" />
+      <created>1702811109285</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702811109285</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +239,8 @@
     <MESSAGE value="PlaceOrder Search Customer Refactored" />
     <MESSAGE value="Removed Unused Imports" />
     <MESSAGE value="Loose Coupled and Dependency injected" />
-    <option name="LAST_COMMIT_MESSAGE" value="Loose Coupled and Dependency injected" />
+    <MESSAGE value="PlaceOrderFormController cohesion is high now" />
+    <MESSAGE value="PlaceOrderFormController Loose coupled and dependency injected now" />
+    <option name="LAST_COMMIT_MESSAGE" value="PlaceOrderFormController Loose coupled and dependency injected now" />
   </component>
 </project>
