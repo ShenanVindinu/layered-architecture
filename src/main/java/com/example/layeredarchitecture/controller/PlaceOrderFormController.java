@@ -374,8 +374,6 @@ public class PlaceOrderFormController {
 
             //Save the Order to the order table
             boolean b2 = orderDAO.saveOrder(new OrderDTO(orderId, orderDate, customerId));
-
-
             if (!b2) {
                 connection.rollback();
                 connection.setAutoCommit(true);
@@ -404,8 +402,6 @@ public class PlaceOrderFormController {
 
                 //update item
                 boolean b = itemDAO.update(new ItemDTO(item.getCode(), item.getDescription(), item.getUnitPrice(), item.getQtyOnHand()));
-
-
                 if (!b) {
                     connection.rollback();
                     connection.setAutoCommit(true);

@@ -4,23 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="removed unused imports">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/OrderDetailDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/OrderDetailDAOImpl.java" afterDir="false" />
+    <list default="true" id="e83dbf1e-8d91-47f2-9aa7-ce070aa54ea9" name="Changes" comment="refactored into order and orderDetail">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageCustomersFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/ManageItemsFormController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/controller/PlaceOrderFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/CustomerDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/ItemDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/OrderDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/dao/OrderDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/model/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/model/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/model/OrderDetailDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/layeredarchitecture/model/OrderDetailDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageCustomersFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageCustomersFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/ManageItemsFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/PlaceOrderFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/controller/PlaceOrderFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/CustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/CustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/CustomerDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/CustomerDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/ItemDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/PlaceOrderDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/dao/PlaceOrderDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/model/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/model/OrderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/model/OrderDetailDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/layeredarchitecture/model/OrderDetailDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <workItem from="1702821032264" duration="3988000" />
       <workItem from="1702830499378" duration="1169000" />
       <workItem from="1702914893970" duration="148000" />
-      <workItem from="1702955697363" duration="3584000" />
+      <workItem from="1702955697363" duration="5787000" />
     </task>
     <task id="LOCAL-00001" summary="Db Connection Password Changed,&#10;&#10;DAO created">
       <option name="closed" value="true" />
@@ -262,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702831643967</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactored into order and orderDetail">
+      <option name="closed" value="true" />
+      <created>1702961091417</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1702961091417</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +291,7 @@
     <MESSAGE value="PlaceOrderFormController Loose coupled and dependency injected now" />
     <MESSAGE value="Checked and corrected some code to reduce boilerplate code" />
     <MESSAGE value="removed unused imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused imports" />
+    <MESSAGE value="refactored into order and orderDetail" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored into order and orderDetail" />
   </component>
 </project>
