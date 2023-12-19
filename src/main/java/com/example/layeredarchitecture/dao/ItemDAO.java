@@ -1,23 +1,17 @@
 package com.example.layeredarchitecture.dao;
 
+import com.example.layeredarchitecture.db.DBConnection;
 import com.example.layeredarchitecture.model.ItemDTO;
-import com.example.layeredarchitecture.view.tdm.ItemTM;
 
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public interface ItemDAO {
-
-    public ArrayList<ItemTM> getAllItems() throws SQLException, ClassNotFoundException;
-
-    public void deleteItem(ItemDTO dto) throws SQLException, ClassNotFoundException;
-
-    public void saveItem(ItemDTO dto) throws SQLException, ClassNotFoundException;
-
-    public void updateItem(ItemDTO dto) throws SQLException, ClassNotFoundException;
-
-    public boolean existItems(ItemDTO dto) throws SQLException, ClassNotFoundException;
-
-    public String generateNewId() throws SQLException, ClassNotFoundException;
-
+    public ArrayList<ItemDTO> getAllItems() throws SQLException, ClassNotFoundException;
+    public boolean saveItem(ItemDTO itemDTO) throws SQLException, ClassNotFoundException;
+    public boolean deleteItem(String code) throws SQLException, ClassNotFoundException;
+    public boolean update(ItemDTO itemDTO) throws SQLException, ClassNotFoundException;
+    public boolean existItem(String code) throws SQLException, ClassNotFoundException;
+    public String genarateId() throws SQLException, ClassNotFoundException;
+    public ItemDTO searchItem(String code) throws SQLException, ClassNotFoundException;
 }
