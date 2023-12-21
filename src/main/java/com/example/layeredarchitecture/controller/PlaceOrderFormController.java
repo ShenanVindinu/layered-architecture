@@ -394,7 +394,7 @@ public class PlaceOrderFormController {
 
 
             for (OrderDetailDTO detail : orderDetails) {
-                boolean b3 = orderDetailsDAO.saveOrderDetails(detail);
+                boolean b3 = orderDetailsDAO.save(detail);
                 if (!b3) {
                     connection.rollback();
                     connection.setAutoCommit(true);

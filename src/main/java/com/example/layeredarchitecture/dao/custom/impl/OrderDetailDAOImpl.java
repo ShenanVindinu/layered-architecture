@@ -7,12 +7,43 @@ import com.example.layeredarchitecture.model.OrderDetailDTO;
 
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class OrderDetailDAOImpl implements OrderDetailDAO {
     @Override
-    public boolean saveOrderDetails(OrderDetailDTO dto) throws SQLException, ClassNotFoundException {
+    public ArrayList<OrderDetailDTO> getAll() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
+    @Override
+    public boolean save(OrderDetailDTO dto) throws SQLException, ClassNotFoundException {
         return SQLUtil.execute("INSERT INTO OrderDetails (oid, itemCode, unitPrice, qty) VALUES (?,?,?,?)",
                 dto.getOid(), dto.getItemCode(), dto.getUnitPrice(), dto.getQty());
+    }
+
+    @Override
+    public boolean update(OrderDetailDTO dto) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public boolean delete(String c) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public String generateNewId() throws SQLException, ClassNotFoundException {
+        return null;
+    }
+
+    @Override
+    public boolean exist(String c) throws SQLException, ClassNotFoundException {
+        return false;
+    }
+
+    @Override
+    public OrderDetailDTO search(String c) throws SQLException, ClassNotFoundException {
+        return null;
     }
 
 }
